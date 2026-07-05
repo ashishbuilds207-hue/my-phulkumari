@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/ensure-videos.mjs && next dev",
+    "build": "node scripts/ensure-videos.mjs && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "git lfs install && git lfs pull",
+    "videos:pull": "git lfs install && git lfs pull",
+    "videos:push": "git lfs push --all origin"
   },
   "dependencies": {
     "next": "16.2.10",
