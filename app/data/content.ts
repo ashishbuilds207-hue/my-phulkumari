@@ -1,3 +1,5 @@
+import { videoUrl } from "../lib/media";
+
 export type ContentItem = {
   id: string;
   title: string;
@@ -15,8 +17,8 @@ export type ContentItem = {
   progress?: number;
 };
 
-export const MAIN_VIDEO = "/videos/main/VN20260706_024429.mp4";
-export const ROMANTIC_VIDEO = "/videos/main/Romantic_Video_v2.mp4";
+export const MAIN_VIDEO = videoUrl("/videos/main/VN20260706_024429.mp4");
+export const ROMANTIC_VIDEO = videoUrl("/videos/main/Romantic_Video_v2.mp4");
 
 export type HeroSlide = {
   id: string;
@@ -75,7 +77,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "When the sun dips low, memories come alive in warm light and quiet reflection.",
     image: "/images/IMG_20260705_201058_344.jpg",
-    video: "/videos/short/VID_20260705_074110_444.mp4",
+    video: videoUrl("/videos/short/VID_20260705_074110_444.mp4"),
     year: "2026",
     match: 92,
     rating: "U/A 13+",
@@ -89,7 +91,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Late-night tales whispered between shadows — a collection of intimate moments.",
     image: "/images/IMG_20260705_201058_345.jpg",
-    video: "/videos/short/VID_20260705_074114_848.mp4",
+    video: videoUrl("/videos/short/VID_20260705_074114_848.mp4"),
     year: "2025",
     match: 88,
     rating: "U/A 16+",
@@ -102,7 +104,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Fighting every wave to find your place — a story of courage and determination.",
     image: "/images/IMG_20260705_201058_346.jpg",
-    video: "/videos/short/VID_20260705_074119_345.mp4",
+    video: videoUrl("/videos/short/VID_20260705_074119_345.mp4"),
     year: "2024",
     match: 85,
     rating: "U/A 16+",
@@ -116,7 +118,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Soft textures and bold colors collide in this visually stunning short film.",
     image: "/images/IMG_20260705_201058_347.jpg",
-    video: "/videos/short/VID_20260705_074123_924.mp4",
+    video: videoUrl("/videos/short/VID_20260705_074123_924.mp4"),
     year: "2025",
     match: 90,
     rating: "U/A 13+",
@@ -130,7 +132,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Neon reflections and bustling streets — urban life captured in motion.",
     image: "/images/IMG_20260705_201104_717.jpg",
-    video: "/videos/short/VID_20260705_074128_472.mp4",
+    video: videoUrl("/videos/short/VID_20260705_074128_472.mp4"),
     year: "2024",
     match: 87,
     rating: "U/A 13+",
@@ -143,7 +145,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "What remains when words fade away — an emotional exploration of loss and hope.",
     image: "/images/IMG_20260705_201104_719.jpg",
-    video: "/videos/short/VID_20260705_075612_816.mp4",
+    video: videoUrl("/videos/short/VID_20260705_075612_816.mp4"),
     year: "2025",
     match: 94,
     rating: "U/A 16+",
@@ -157,7 +159,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Like flowers after rain, beauty emerges from the most unexpected places.",
     image: "/images/IMG_20260705_201104_720.jpg",
-    video: "/videos/short/Screen_Recording_20260706_003320_Instagram.mp4",
+    video: videoUrl("/videos/short/Screen_Recording_20260706_003320_Instagram.mp4"),
     year: "2026",
     match: 91,
     rating: "U/A 13+",
@@ -171,7 +173,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Light and darkness dance together in this visually arresting narrative.",
     image: "/images/IMG_20260705_201104_721.jpg",
-    video: "/videos/short/Screen_Recording_20260706_003522_Instagram.mp4",
+    video: videoUrl("/videos/short/Screen_Recording_20260706_003522_Instagram.mp4"),
     year: "2024",
     match: 83,
     rating: "U/A 16+",
@@ -184,7 +186,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Where sky meets earth, endless possibilities stretch before you.",
     image: "/images/IMG_20260705_201339_376.jpg",
-    video: "/videos/short/Screen_Recording_20260706_003559_Instagram.mp4",
+    video: videoUrl("/videos/short/Screen_Recording_20260706_003559_Instagram.mp4"),
     year: "2025",
     match: 89,
     rating: "U/A 13+",
@@ -197,7 +199,7 @@ const items: Omit<ContentItem, "id">[] = [
     description:
       "Passion runs deep in this bold tale of love, loss, and redemption.",
     image: "/images/IMG_20260705_201343_193.jpg",
-    video: "/videos/short/Screen_Recording_20260706_003633_Instagram.mp4",
+    video: videoUrl("/videos/short/Screen_Recording_20260706_003633_Instagram.mp4"),
     year: "2024",
     match: 86,
     rating: "U/A 16+",

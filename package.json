@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/ensure-videos.mjs && next dev",
-    "build": "node scripts/ensure-videos.mjs && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "git lfs install && git lfs pull",
     "videos:pull": "git lfs install && git lfs pull",
     "videos:push": "git lfs push --all origin"
   },

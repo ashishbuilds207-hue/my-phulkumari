@@ -1,10 +1,15 @@
 import { readFileSync, statSync, readdirSync } from "fs";
 import { join } from "path";
 
+if (process.env.VERCEL === "1") {
+  console.log("Skipping local video check on Vercel (videos served from GitHub CDN).");
+  process.exit(0);
+}
+
 const publicDir = join(process.cwd(), "public", "videos");
 
-function walk(dir) {
-  const files = [];
+function walk(dir: string): string[] {
+  const files: string[] = [];
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const fullPath = join(dir, entry.name);
     if (entry.isDirectory()) files.push(...walk(fullPath));
@@ -27,7 +32,7 @@ for (const file of walk(publicDir)) {
 }
 
 if (hasPointer) {
-  console.error("\nVideos are Git LFS pointers. Run:\n  git lfs install\n  git lfs pull\n");
+  console.error("\nVideos are Git LFS pointers. Run:\n  npm run videos:pull\n");
   process.exit(1);
 }
 
