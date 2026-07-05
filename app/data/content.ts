@@ -17,7 +17,7 @@ export type ContentItem = {
   progress?: number;
 };
 
-export const MAIN_VIDEO = videoUrl("/videos/main/VN20260706_024429.mp4");
+export const MAIN_VIDEO = videoUrl("/videos/main/VN20260706_041452.mp4");
 export const ROMANTIC_VIDEO = videoUrl("/videos/main/Romantic_Video_v2.mp4");
 
 export type HeroSlide = {
