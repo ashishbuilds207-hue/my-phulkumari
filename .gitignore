@@ -40,6 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# temp extraction folders
+# local source copies (served from /public)
+/assets/
 /assets/source/
 /assets/temp/
