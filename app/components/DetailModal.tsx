@@ -11,10 +11,21 @@ type DetailModalProps = {
   onSelect: (item: ContentItem) => void;
 };
 
+function hashId(id: string): number {
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    hash = (hash << 5) - hash + id.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
 function pickRelated(current: ContentItem): ContentItem[] {
   const others = allContent.filter((c) => c.id !== current.id);
-  const shuffled = [...others].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, 6);
+  const seed = hashId(current.id);
+  return [...others]
+    .sort((a, b) => hashId(a.id + seed) - hashId(b.id + seed))
+    .slice(0, 6);
 }
 
 export default function DetailModal({ item, onClose, onPlay, onSelect }: DetailModalProps) {
